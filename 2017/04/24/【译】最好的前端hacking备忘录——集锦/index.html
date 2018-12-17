@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Indrek Lasn 瑞士软件工程师 😍10月27日 记住所有API几乎是不可能的，这时候你需要一份备忘录！下面是我收集的最棒的前端备忘录。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【译】最好的前端hacking备忘录——集锦">
+<meta property="og:url" content="http://yoursite.com/2017/04/24/【译】最好的前端hacking备忘录——集锦/index.html">
+<meta property="og:site_name" content="Namelessman">
+<meta property="og:description" content="Indrek Lasn 瑞士软件工程师 😍10月27日 记住所有API几乎是不可能的，这时候你需要一份备忘录！下面是我收集的最棒的前端备忘录。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p0.qhimg.com/t016bac62e9f701b48c.png">
+<meta property="og:image" content="http://p0.qhimg.com/t01f0f792cd49f8c934.png">
+<meta property="og:image" content="http://p0.qhimg.com/t011c3f5504955269d3.png">
+<meta property="og:image" content="http://p0.qhimg.com/t013355f0cdb4d05664.png">
+<meta property="og:image" content="http://p0.qhimg.com/t012ad9b192599129b6.png">
+<meta property="og:image" content="http://p0.qhimg.com/t0171bc267e343653b8.png">
+<meta property="og:image" content="http://p0.qhimg.com/t0156acddd316118816.png">
+<meta property="og:image" content="http://p0.qhimg.com/t01c350afaa87bdda7c.png">
+<meta property="og:image" content="http://p0.qhimg.com/t01cbc97ef2afc4cc4a.png">
+<meta property="og:image" content="http://p0.qhimg.com/t01f576f940ada52685.png">
+<meta property="og:image" content="http://p0.qhimg.com/t01d223cc3d03897b21.png">
+<meta property="og:image" content="http://p0.qhimg.com/t012ea47ce8adac68a6.png">
+<meta property="og:updated_time" content="2018-12-17T05:11:39.472Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【译】最好的前端hacking备忘录——集锦">
+<meta name="twitter:description" content="Indrek Lasn 瑞士软件工程师 😍10月27日 记住所有API几乎是不可能的，这时候你需要一份备忘录！下面是我收集的最棒的前端备忘录。">
+<meta name="twitter:image" content="http://p0.qhimg.com/t016bac62e9f701b48c.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/24/【译】最好的前端hacking备忘录——集锦/">
+
+
+
+
+
+  <title>【译】最好的前端hacking备忘录——集锦 | Namelessman</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Namelessman</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/【译】最好的前端hacking备忘录——集锦/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="namelessman">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Namelessman">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">【译】最好的前端hacking备忘录——集锦</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-24T08:00:00+08:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://medium.freecodecamp.org/@wesharehoodies?source=post_header_lockup" target="_blank" rel="noopener">Indrek Lasn</a> 瑞士软件工程师 😍10月27日</p>
+<p>记住所有API几乎是不可能的，这时候你需要一份备忘录！下面是我收集的最棒的前端备忘录。</p>
+<a id="more"></a>
+<h3 id="Javascript-ES2015-特性"><a href="#Javascript-ES2015-特性" class="headerlink" title="Javascript ES2015 特性"></a><a href="https://devhints.io/es6" target="_blank" rel="noopener">Javascript ES2015 特性</a></h3><p><img src="http://p0.qhimg.com/t016bac62e9f701b48c.png" alt=""></p>
+<p><a href="https://devhints.io/es6" target="_blank" rel="noopener">https://devhints.io/es6</a></p>
+<h3 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a><a href="http://overapi.com/javascript" target="_blank" rel="noopener">Javascript</a></h3><p><img src="http://p0.qhimg.com/t01f0f792cd49f8c934.png" alt=""></p>
+<p><a href="http://overapi.com/javascript" target="_blank" rel="noopener">http://overapi.com/javascript</a></p>
+<h3 id="Javascript-正则表达式"><a href="#Javascript-正则表达式" class="headerlink" title="Javascript 正则表达式"></a><a href="https://www.debuggex.com/cheatsheet/regex/javascript" target="_blank" rel="noopener">Javascript 正则表达式</a></h3><p><img src="http://p0.qhimg.com/t011c3f5504955269d3.png" alt=""></p>
+<p><a href="https://www.debuggex.com/cheatsheet/regex/javascript" target="_blank" rel="noopener">https://www.debuggex.com/cheatsheet/regex/javascript</a></p>
+<h3 id="React"><a href="#React" class="headerlink" title="React"></a><a href="https://devhints.io/react" target="_blank" rel="noopener">React</a></h3><p><img src="http://p0.qhimg.com/t013355f0cdb4d05664.png" alt=""></p>
+<p><a href="https://devhints.io/react" target="_blank" rel="noopener">https://devhints.io/react</a></p>
+<h3 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a><a href="https://github.com/linkmesrl/react-journey-2016/blob/master/resources/egghead-redux-cheat-sheet-3-2-1.pdf" target="_blank" rel="noopener">Redux</a></h3><p><img src="http://p0.qhimg.com/t012ad9b192599129b6.png" alt=""></p>
+<p><a href="https://github.com/linkmesrl/react-journey-2016/blob/master/resources/egghead-redux-cheat-sheet-3-2-1.pdf" target="_blank" rel="noopener">https://github.com/linkmesrl/react-journey-2016/blob/master/resources/egghead-redux-cheat-sheet-3-2-1.pdf</a></p>
+<h3 id="Vuejs"><a href="#Vuejs" class="headerlink" title="Vuejs"></a><a href="https://vuejs-tips.github.io/cheatsheet/" target="_blank" rel="noopener">Vuejs</a></h3><p><img src="http://p0.qhimg.com/t0171bc267e343653b8.png" alt=""></p>
+<p><a href="https://vuejs-tips.github.io/cheatsheet/" target="_blank" rel="noopener">https://vuejs-tips.github.io/cheatsheet/</a></p>
+<h3 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a><a href="https://vuejs-tips.github.io/vuex-cheatsheet/" target="_blank" rel="noopener">Vuex</a></h3><p><img src="http://p0.qhimg.com/t0156acddd316118816.png" alt=""></p>
+<p><a href="https://vuejs-tips.github.io/vuex-cheatsheet/" target="_blank" rel="noopener">https://vuejs-tips.github.io/vuex-cheatsheet/</a></p>
+<h3 id="Angular-4"><a href="#Angular-4" class="headerlink" title="Angular 4"></a><a href="https://angular.io/guide/cheatsheet" target="_blank" rel="noopener">Angular 4</a></h3><p><img src="http://p0.qhimg.com/t01c350afaa87bdda7c.png" alt=""></p>
+<p><a href="https://angular.io/guide/cheatsheet" target="_blank" rel="noopener">https://angular.io/guide/cheatsheet</a></p>
+<h3 id="Flexbox"><a href="#Flexbox" class="headerlink" title="Flexbox"></a><a href="https://yoksel.github.io/flex-cheatsheet/" target="_blank" rel="noopener">Flexbox</a></h3><p><img src="http://p0.qhimg.com/t01cbc97ef2afc4cc4a.png" alt=""></p>
+<p><a href="https://yoksel.github.io/flex-cheatsheet/" target="_blank" rel="noopener">https://yoksel.github.io/flex-cheatsheet/</a></p>
+<h3 id="SCSS"><a href="#SCSS" class="headerlink" title="SCSS"></a><a href="https://devhints.io/sass" target="_blank" rel="noopener">SCSS</a></h3><p><img src="http://p0.qhimg.com/t01f576f940ada52685.png" alt=""></p>
+<p><a href="https://devhints.io/sass" target="_blank" rel="noopener">https://devhints.io/sass</a></p>
+<h3 id="Stylus"><a href="#Stylus" class="headerlink" title="Stylus"></a><a href="https://devhints.io/stylus" target="_blank" rel="noopener">Stylus</a></h3><p><img src="http://p0.qhimg.com/t01d223cc3d03897b21.png" alt=""></p>
+<p><a href="https://devhints.io/stylus" target="_blank" rel="noopener">https://devhints.io/stylus</a></p>
+<h3 id="GraphQL"><a href="#GraphQL" class="headerlink" title="GraphQL"></a><a href="https://raw.githubusercontent.com/sogko/graphql-shorthand-notation-cheat-sheet/master/graphql-shorthand-notation-cheat-sheet.png" target="_blank" rel="noopener">GraphQL</a></h3><p><img src="http://p0.qhimg.com/t012ea47ce8adac68a6.png" alt=""></p>
+<p><a href="https://raw.githubusercontent.com/sogko/graphql-shorthand-notation-cheat-sheet/master/graphql-shorthand-notation-cheat-sheet.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/sogko/graphql-shorthand-notation-cheat-sheet/master/graphql-shorthand-notation-cheat-sheet.png</a></p>
+<p>遗漏了你喜欢的备忘录？在评论里告诉我吧！</p>
+<p>觉得这篇文章有用的话，点个赞让更多人看到吧。谢谢了！</p>
+<p><a href="https://medium.com/@wesharehoodies/easy-guide-for-webpack-2-0-from-scratch-fe508a3ce44e" target="_blank" rel="noopener"><strong>如何从头设置Webpack +2.0</strong></a></p>
+<p><a href="https://medium.com/@wesharehoodies/best-courses-to-learn-javascript-in-2017-fc3a254638cc" target="_blank" rel="noopener"><strong>2017年学习JavaScript的最佳课程</strong></a></p>
+<p><a href="https://medium.com/@wesharehoodies/bitcoin-ripple-ethereum-price-checker-with-react-native-redux-e9d076037092" target="_blank" rel="noopener"><strong>方法学习：用RN + Redux搭建加密货币的原生移动端应用</strong></a></p>
+<p>当然，关注我可以看到更多精彩内容哦，比心❤！</p>
+<p>edit: 喜欢的话, <a href="http://twitter.com/lasnindrek" target="_blank" rel="noopener">也可以关注我的Twetter！</a><br>​                </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/24/微信小程序开发记录/" rel="next" title="微信小程序开发记录">
+                <i class="fa fa-chevron-left"></i> 微信小程序开发记录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/14/less初步/" rel="prev" title="less初步">
+                less初步 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">namelessman</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Javascript-ES2015-特性"><span class="nav-number">1.</span> <span class="nav-text">Javascript ES2015 特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Javascript"><span class="nav-number">2.</span> <span class="nav-text">Javascript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Javascript-正则表达式"><span class="nav-number">3.</span> <span class="nav-text">Javascript 正则表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#React"><span class="nav-number">4.</span> <span class="nav-text">React</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redux"><span class="nav-number">5.</span> <span class="nav-text">Redux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vuejs"><span class="nav-number">6.</span> <span class="nav-text">Vuejs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vuex"><span class="nav-number">7.</span> <span class="nav-text">Vuex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Angular-4"><span class="nav-number">8.</span> <span class="nav-text">Angular 4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flexbox"><span class="nav-number">9.</span> <span class="nav-text">Flexbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SCSS"><span class="nav-number">10.</span> <span class="nav-text">SCSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stylus"><span class="nav-number">11.</span> <span class="nav-text">Stylus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GraphQL"><span class="nav-number">12.</span> <span class="nav-text">GraphQL</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">namelessman</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
