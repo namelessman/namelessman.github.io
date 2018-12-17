@@ -1,14 +1,14 @@
 ---
 title: 【译】最好的前端hacking备忘录——集锦
+date: 2017-04-24 8:00:00
+tags:
 ---
 
-[![查看Indrek Lasn的信息](http://p0.qhimg.com/t01e295fb14c32c3299.jpg)](https://medium.freecodecamp.org/@wesharehoodies?source=post_header_lockup)[Indrek Lasn](https://medium.freecodecamp.org/@wesharehoodies?source=post_header_lockup) 瑞士软件工程师 😍10月27日
-
-
-
+[Indrek Lasn](https://medium.freecodecamp.org/@wesharehoodies?source=post_header_lockup) 瑞士软件工程师 😍10月27日
 
 记住所有API几乎是不可能的，这时候你需要一份备忘录！下面是我收集的最棒的前端备忘录。
 
+<!--more-->
 
 ### [Javascript ES2015 特性](https://devhints.io/es6)
 
