@@ -79,17 +79,13 @@
 
 
 
-<meta name="description" content="CSS变量如同less的@变量名:变量值，可以定义后使用，方便使用和维护。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CSS变量入门总结">
-<meta property="og:url" content="http://yoursite.com/2017/11/14/CSS变量/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Namelessman">
+<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
 <meta property="og:site_name" content="Namelessman">
-<meta property="og:description" content="CSS变量如同less的@变量名:变量值，可以定义后使用，方便使用和维护。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-17T05:11:55.655Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS变量入门总结">
-<meta name="twitter:description" content="CSS变量如同less的@变量名:变量值，可以定义后使用，方便使用和维护。">
+<meta name="twitter:title" content="Namelessman">
 
 
 
@@ -119,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/14/CSS变量/">
+  <link rel="canonical" href="http://yoursite.com/archives/2018/">
 
 
 
 
 
-  <title>CSS变量入门总结 | Namelessman</title>
+  <title>归档 | Namelessman</title>
   
 
 
@@ -153,7 +149,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -227,156 +223,72 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
 
-  
+      <span class="archive-page-counter">
+        
+        
+        
+          
+        
+        嗯..! 目前共计 6 篇日志。 继续努力。
+      </span>
 
-  
-  
-  
+      
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2018">2018</h1>
+          </div>
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/14/CSS变量/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="namelessman">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Namelessman">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">CSS变量入门总结</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2018/12/19/关于彩蛋的一些想法/" itemprop="url">
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="name">关于彩蛋的一些想法</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-14T08:00:00+08:00">
-                2017-11-14
-              </time>
-            
+            </a>
+        
+      </h2>
 
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2018-12-19T08:00:00+08:00" content="2018-12-19">
+          12-19
+        </time>
+      </div>
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>CSS变量如同less的<code>@变量名:变量值</code>，可以定义后使用，方便使用和维护。</p>
-<a id="more"></a>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>定义使用两根连词线<code>--</code>，如<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--foo: #eee;</span><br><span class="line">--bar: <span class="number">16</span>px;</span><br></pre></td></tr></table></figure></p>
-<p>变量名对大小写敏感。</p>
-<h2 id="读取"><a href="#读取" class="headerlink" title="读取"></a>读取</h2><p>使用var()函数读取变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">     --foo:#222;</span><br><span class="line">     color:var(--foo);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>var()函数还可以使用第二个参数，表示默认值。第二个函数不处理逗号和空格。<br>var()函数也可以用作定义时的属性值。<br><code>--foo：var(--bar);</code></p>
-<h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><ol>
-<li>字符串<br>可以与其他字符串拼接</li>
-<li>数值<br>不能直接与数值单位连用，必须使用calc()函数<br>如果变量值带单位，就不能写成字符串</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/* 错误示范 */</span><br><span class="line">--foo: &apos;1px&apos;;</span><br></pre></td></tr></table></figure>
-<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>与CSS类似，可以在多个选择器内定义，优先级高的会层叠在优先级低的上。<br>根元素是<code>:root</code></p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/11/14/Vue开发记录之 keep-alive/" rel="next" title="Vue开发记录之 keep-alive">
-                <i class="fa fa-chevron-left"></i> Vue开发记录之 keep-alive
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/19/关于彩蛋的一些想法/" rel="prev" title="关于彩蛋的一些想法">
-                关于彩蛋的一些想法 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
       
+
     </div>
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -384,10 +296,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -408,17 +316,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -460,22 +359,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读取"><span class="nav-number">2.</span> <span class="nav-text">读取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型"><span class="nav-number">3.</span> <span class="nav-text">类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域"><span class="nav-number">4.</span> <span class="nav-text">作用域</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -609,10 +492,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
