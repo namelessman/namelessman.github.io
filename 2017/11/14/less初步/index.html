@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="less初步注释注释分为两种：  / 我是注释 / // 我是注释  区别在于，第一种编译后会保留，而第二种不会保留。">
+<meta name="description" content="less初步注释注释分为两种：  /* 我是注释 */ // 我是注释  区别在于，第一种编译后会保留，而第二种不会保留。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="less初步">
-<meta property="og:url" content="http://yoursite.com/2017/11/14/less初步/index.html">
-<meta property="og:site_name" content="Namelessman">
-<meta property="og:description" content="less初步注释注释分为两种：  / 我是注释 / // 我是注释  区别在于，第一种编译后会保留，而第二种不会保留。">
+<meta property="og:url" content="http://namelessman.js.org/2017/11/14/less初步/index.html">
+<meta property="og:site_name" content="namelessman">
+<meta property="og:description" content="less初步注释注释分为两种：  /* 我是注释 */ // 我是注释  区别在于，第一种编译后会保留，而第二种不会保留。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-12-17T05:11:48.033Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="less初步">
-<meta name="twitter:description" content="less初步注释注释分为两种：  / 我是注释 / // 我是注释  区别在于，第一种编译后会保留，而第二种不会保留。">
+<meta name="twitter:description" content="less初步注释注释分为两种：  /* 我是注释 */ // 我是注释  区别在于，第一种编译后会保留，而第二种不会保留。">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/14/less初步/">
+  <link rel="canonical" href="http://namelessman.js.org/2017/11/14/less初步/">
 
 
 
 
 
-  <title>less初步 | Namelessman</title>
+  <title>less初步 | namelessman</title>
   
 
 
@@ -164,7 +164,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Namelessman</span>
+        <span class="site-title">namelessman</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -241,7 +241,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/14/less初步/">
+    <link itemprop="mainEntityOfPage" href="http://namelessman.js.org/2017/11/14/less初步/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="namelessman">
@@ -250,7 +250,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Namelessman">
+      <meta itemprop="name" content="namelessman">
     </span>
 
     
@@ -310,30 +310,38 @@
       
         <h1 id="less初步"><a href="#less初步" class="headerlink" title="less初步"></a>less初步</h1><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>注释分为两种：</p>
 <ul>
-<li>/<em> 我是注释 </em>/</li>
+<li>/* 我是注释 */</li>
 <li>// 我是注释</li>
 </ul>
 <p>区别在于，第一种编译后会保留，而第二种不会保留。</p>
 <a id="more"></a>
+
 <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>变量定义：  <code>@key:value;</code></p>
 <p>LESS 中的变量为完全的 ‘常量’ ，所以只能定义一次。</p>
 <h2 id="混合"><a href="#混合" class="headerlink" title="混合"></a>混合</h2><ul>
 <li>基本用法</li>
 </ul>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">variable</span>&#123;</span><br><span class="line">  <span class="attribute">property</span>: value;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">selector</span>&#123;</span><br><span class="line">  <span class="selector-tag">variable</span>;</span><br><span class="line">  <span class="selector-tag">others</span><span class="selector-pseudo">:...</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>带参数</li>
 </ul>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">variable</span>(<span class="variable">@key</span>)&#123;</span><br><span class="line">  <span class="attribute">property</span>: some other <span class="variable">@key</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">selector</span>&#123;</span><br><span class="line">  <span class="selector-tag">variable</span>(value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>带默认值</li>
 </ul>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">variable</span>(<span class="variable">@key</span>:default)&#123;</span><br><span class="line">  <span class="attribute">property</span>: some other <span class="variable">@key</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">selector</span>&#123;</span><br><span class="line">  <span class="selector-tag">variable</span>();</span><br><span class="line">  <span class="comment">// or</span></span><br><span class="line">  <span class="comment">// variable(value)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="匹配模式"><a href="#匹配模式" class="headerlink" title="匹配模式"></a>匹配模式</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">variable</span>(condition1)&#123;</span><br><span class="line">  <span class="attribute">property</span>:...;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">variable</span>(condition2)&#123;</span><br><span class="line">  <span class="attribute">property</span>:...;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">variable</span>(<span class="variable">@_</span>)&#123;	<span class="comment">// 通用</span></span><br><span class="line">  <span class="attribute">commonProperty</span>:...;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">selector</span>&#123;</span><br><span class="line">  <span class="selector-tag">variable</span>(condition1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@variable:</span>value;</span><br><span class="line"><span class="selector-tag">variable</span>&#123;</span><br><span class="line">  <span class="attribute">property</span>: value + <span class="variable">@variable</span>;	<span class="comment">//如果value为10px，@variable为10，也可以进行运算</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">parentSelector</span>&#123;</span><br><span class="line">  <span class="attribute">property</span>:value;</span><br><span class="line">  </span><br><span class="line">  <span class="selector-tag">childSelector</span>&#123;</span><br><span class="line">    <span class="attribute">property</span>:value;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// &amp;表示上一层选择器，如下面所示，表示的是childSelector:hover</span></span><br><span class="line">    <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">      <span class="comment">//...</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h2><p><code>@arguments</code>包含了所有传递进来的参数</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">variable</span>(<span class="variable">@key1</span>:default, <span class="variable">@key2</span>:default)&#123;</span><br><span class="line">  <span class="attribute">property</span>: <span class="variable">@arguments</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="避免编译"><a href="#避免编译" class="headerlink" title="避免编译"></a>避免编译</h2><p>用<code>~&#39;...&#39;</code>包裹不需要编译的内容。</p>
 <h2 id="important"><a href="#important" class="headerlink" title="!important"></a>!important</h2><p>在分号前增加<code>!important</code>即可为语句增加<code>!important</code>。</p>
 <hr>
@@ -362,8 +370,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/14/CSS变量/" rel="next" title="CSS变量入门总结">
-                <i class="fa fa-chevron-left"></i> CSS变量入门总结
+              <a href="/2017/04/24/【译】最好的前端hacking备忘录——集锦/" rel="next" title="【译】最好的前端hacking备忘录——集锦">
+                <i class="fa fa-chevron-left"></i> 【译】最好的前端hacking备忘录——集锦
               </a>
             
           </div>
@@ -372,8 +380,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/19/关于彩蛋的一些想法/" rel="prev" title="关于彩蛋的一些想法">
-                关于彩蛋的一些想法 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/14/Vue开发记录之 keep-alive/" rel="prev" title="Vue开发记录之 keep-alive">
+                Vue开发记录之 keep-alive <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -451,7 +459,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -517,7 +525,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

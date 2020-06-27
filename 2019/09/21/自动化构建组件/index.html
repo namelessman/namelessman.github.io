@@ -83,8 +83,8 @@
 <meta name="keywords" content="semantic-release">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动化构建组件">
-<meta property="og:url" content="http://yoursite.com/2019/09/21/自动化构建组件/index.html">
-<meta property="og:site_name" content="Namelessman">
+<meta property="og:url" content="http://namelessman.js.org/2019/09/21/自动化构建组件/index.html">
+<meta property="og:site_name" content="namelessman">
 <meta property="og:description" content="自动化构建组件一个组件的从开发到发布的过程，一般是开发-改版本-编译-发布，其中，只有开发是需要脑力劳动的，改版本、编译和发布则是机械操作。那么，是否有工具可以把我们从重复的劳动中解放出来呢？已经有人想到了这一点，并推出了semantic-release。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-08-22T01:21:59.381Z">
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/09/21/自动化构建组件/">
+  <link rel="canonical" href="http://namelessman.js.org/2019/09/21/自动化构建组件/">
 
 
 
 
 
-  <title>自动化构建组件 | Namelessman</title>
+  <title>自动化构建组件 | namelessman</title>
   
 
 
@@ -165,7 +165,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Namelessman</span>
+        <span class="site-title">namelessman</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/21/自动化构建组件/">
+    <link itemprop="mainEntityOfPage" href="http://namelessman.js.org/2019/09/21/自动化构建组件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="namelessman">
@@ -251,7 +251,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Namelessman">
+      <meta itemprop="name" content="namelessman">
     </span>
 
     
@@ -311,6 +311,7 @@
       
         <h1 id="自动化构建组件"><a href="#自动化构建组件" class="headerlink" title="自动化构建组件"></a>自动化构建组件</h1><p>一个组件的从开发到发布的过程，一般是<code>开发-改版本-编译-发布</code>，其中，只有开发是需要脑力劳动的，改版本、编译和发布则是机械操作。那么，是否有工具可以把我们从重复的劳动中解放出来呢？已经有人想到了这一点，并推出了<code>semantic-release</code>。</p>
 <a id="more"></a>
+
 <h2 id="semantic-release"><a href="#semantic-release" class="headerlink" title="semantic-release"></a>semantic-release</h2><blockquote>
 <p>semantic-release automates the whole package release workflow including: determining the next version number, generating the release notes and publishing the package.</p>
 </blockquote>
@@ -323,9 +324,12 @@
 <p>为了规范，我们引入<a href="https://github.com/commitizen/cz-cli" target="_blank" rel="noopener">commitizen</a>作为管理工具。安装配置后，每次git commit操作，都执行命令<code>npm run commit</code>，此时可以依次选择<code>type</code>、<code>scope</code>等，来生成一个完整的<code>commit message</code>。</p>
 <h2 id="travis"><a href="#travis" class="headerlink" title="travis"></a>travis</h2><p>接下来，我们选择<a href="https://travis-ci.org/" target="_blank" rel="noopener">travis</a>作为CI，这样，我们要做的就只有<code>git commit</code>+<code>git push</code>，剩下的一切就都交给工具了。</p>
 <p>travis只支持GitHub项目托管，如果用GitLab等，可以选择其他的CI。</p>
-<p>首先正确配置GitHub和npm的权限，然后在项目根目录下增加travis配置文件<code>.travis.yml</code>：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line"><span class="attr">  directories:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">~/.npm</span></span><br><span class="line"><span class="attr">notifications:</span></span><br><span class="line"><span class="attr">  email:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">node_js:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">'10'</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">'11'</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">'8'</span></span><br><span class="line"><span class="attr">script:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">npm</span> <span class="string">run</span> <span class="attr">test:prod</span> <span class="string">&amp;&amp;</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line"><span class="attr">after_success:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">if</span> <span class="string">[</span> <span class="string">"$TRAVIS_BRANCH"</span> <span class="string">=</span> <span class="string">"master"</span> <span class="bullet">-a</span> <span class="string">"$TRAVIS_PULL_REQUEST"</span> <span class="string">=</span> <span class="string">"false"</span> <span class="string">];</span> <span class="string">then</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">travis-deploy-once</span> <span class="string">"npm run semantic-release"</span><span class="string">;</span> <span class="string">fi</span></span><br><span class="line"><span class="attr">branches:</span></span><br><span class="line"><span class="attr">  except:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">/^v\d+\.\d+\.\d+$/</span></span><br></pre></td></tr></table></figure></p>
+<p>首先正确配置GitHub和npm的权限，然后在项目根目录下增加travis配置文件<code>.travis.yml</code>：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line"><span class="attr">  directories:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">~/.npm</span></span><br><span class="line"><span class="attr">notifications:</span></span><br><span class="line"><span class="attr">  email:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">node_js:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">'10'</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">'11'</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">'8'</span></span><br><span class="line"><span class="attr">script:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">npm</span> <span class="string">run</span> <span class="attr">test:prod</span> <span class="string">&amp;&amp;</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line"><span class="attr">after_success:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">if</span> <span class="string">[</span> <span class="string">"$TRAVIS_BRANCH"</span> <span class="string">=</span> <span class="string">"master"</span> <span class="bullet">-a</span> <span class="string">"$TRAVIS_PULL_REQUEST"</span> <span class="string">=</span> <span class="string">"false"</span> <span class="string">];</span> <span class="string">then</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">travis-deploy-once</span> <span class="string">"npm run semantic-release"</span><span class="string">;</span> <span class="string">fi</span></span><br><span class="line"><span class="attr">branches:</span></span><br><span class="line"><span class="attr">  except:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">/^v\d+\.\d+\.\d+$/</span></span><br></pre></td></tr></table></figure>
+
 <p>最后，我们再回头，把<code>semantic-relaese</code>的配置文件<code>.releaserc</code>补上：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"branch"</span>: <span class="string">"master"</span>,</span><br><span class="line">    <span class="attr">"plugins"</span>: [</span><br><span class="line">        <span class="string">"@semantic-release/commit-analyzer"</span>,</span><br><span class="line">        [</span><br><span class="line">            <span class="string">"@semantic-release/npm"</span>,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"tarballDir"</span>: <span class="string">"dist"</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        [</span><br><span class="line">            <span class="string">"@semantic-release/github"</span>,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"assets"</span>: <span class="string">"dist/*.tgz"</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>本文对于详细的semiotic-release和travis配置并没有涉及，因为这些在官方文档中都有详细的描述。</p>
 <p>OK，大功告成，你也可以根据你的需求，修改<code>.releaserc</code>文件，比如生成changelog、修改根据<code>commit message</code>修改版本号的策略等。</p>
 <p>构建成功的话，你就可以在你的npm下发现你的npm包了~</p>
@@ -368,6 +372,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/19/表达的权利/" rel="prev" title="表达的权利">
+                表达的权利 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -444,7 +452,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -510,7 +518,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
