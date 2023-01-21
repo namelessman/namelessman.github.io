@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"namelessman.js.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.14.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="开发微信小程序，感受就是方便简单，但是限制也颇多。如果提供了API，那么基本不费力，如果没有提供，则会因为种种限制而变得困难重重。下面记录的主要是开发过程中遇到的一些小问题，不一定是坑，一般是一些初次开发时会稍有迷茫的点。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序开发记录">
+<meta property="og:url" content="http://namelessman.js.org/2017/04/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="namelessman">
+<meta property="og:description" content="开发微信小程序，感受就是方便简单，但是限制也颇多。如果提供了API，那么基本不费力，如果没有提供，则会因为种种限制而变得困难重重。下面记录的主要是开发过程中遇到的一些小问题，不一定是坑，一般是一些初次开发时会稍有迷茫的点。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-04-24T08:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-21T16:37:46.295Z">
+<meta property="article:author" content="namelessman">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://namelessman.js.org/2017/04/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://namelessman.js.org/2017/04/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/","path":"2017/04/24/微信小程序开发记录/","title":"微信小程序开发记录"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>微信小程序开发记录 | namelessman</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">namelessman</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">namelessman</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://namelessman.js.org/2017/04/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="namelessman">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="namelessman">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="微信小程序开发记录 | namelessman">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          微信小程序开发记录
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-04-24 08:00:00" itemprop="dateCreated datePublished" datetime="2017-04-24T08:00:00+00:00">2017-04-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-01-21 16:37:46" itemprop="dateModified" datetime="2023-01-21T16:37:46+00:00">2023-01-21</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>开发微信小程序，感受就是方便简单，但是限制也颇多。如果提供了API，那么基本不费力，如果没有提供，则会因为种种限制而变得困难重重。下面记录的主要是开发过程中遇到的一些小问题，不一定是坑，一般是一些初次开发时会稍有迷茫的点。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>使用模板 <code>&lt;template&gt;</code> 、嵌套使用时，需要绑定数据</p>
+</li>
+<li><p>使用 <code>&lt;scroll-top&gt;</code> 时，要设置 <code>white-space:nowrap</code> ，才能横向滚动</p>
+</li>
+<li><p>超出单行时，使用省略号(通用方法)</p>
+<pre><code> ele&#123;
+     white-space:nowrap;
+     overflow:hidden;
+     text-overflow:ellipsis;
+ &#125;
+</code></pre>
+</li>
+<li><p>小程序的图片标签为 <code>&lt;image&gt;</code> ，不是 <code>&lt;img&gt;</code> </p>
+</li>
+<li><p>奇偶项使用不同模板的方法</p>
+<pre><code> &lt;scroll-view&gt;
+     &lt;block wx:for=&quot;&#123;&#123;items&#125;&#125;&quot;&gt;
+         &lt;template is=&quot;&#123;&#123;index%2==0?'odd':'even'&#125;&#125;&quot; data=&quot;&#123;&#123;data&#125;&#125;&quot;&gt;&lt;/template&gt;
+     &lt;/block&gt;
+ &lt;/scroll-view&gt;
+</code></pre>
+</li>
+<li><p><code>&lt;scroll-view&gt;</code> 的滚动监听，安卓不是实时的，而iOS是实时的。所以两个系统可能需要做不同处理。同时需要注意性能问题。</p>
+</li>
+<li><p>如果不设置 <code>box-sizing:border-box;</code> ，使得此元素的宽度超出了父元素 <code>&lt;scroll-view&gt;</code> ，则可能产生晃动现象。</p>
+</li>
+<li><p>使用 <code>setData</code>时，要注意作用域。</p>
+</li>
+<li><p>循环绑定时，<code>&lt;template&gt;</code> 的 <code>data</code> 值为循环时 <code>wx:for</code> 的值，默认为 <code>item</code></p>
+</li>
+<li><p><code>wx.request()</code> 提交表单时，在header添加 <code>header:&#123;&quot;content-type&quot;:&quot;application/x-www-form-urlencoded&quot;&#125;</code></p>
+</li>
+<li><p>下载和打开文件，在安卓上体验十分不好，谨慎使用。</p>
+</li>
+</ol>
+<p>最后，技术重要，思维更重要。程序员也是一个依赖经验的职业。另外，学习到了一个词：<strong>防御性开发</strong>。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2017/04/24/%E3%80%90%E8%AF%91%E3%80%91%E6%9C%80%E5%A5%BD%E7%9A%84%E5%89%8D%E7%AB%AFhacking%E5%A4%87%E5%BF%98%E5%BD%95%E2%80%94%E2%80%94%E9%9B%86%E9%94%A6/" rel="next" title="【译】最好的前端hacking备忘录——集锦">
+                  【译】最好的前端hacking备忘录——集锦 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">namelessman</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
