@@ -65,6 +65,12 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: next
 
+theme_config:
+  # Google Analytics
+  google_analytics:
+    tracking_id: G-3JW1S6RPYF
+    only_pageview: false
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
