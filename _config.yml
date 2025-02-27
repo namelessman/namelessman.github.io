@@ -7,7 +7,9 @@ title: namelessman
 subtitle:
 description:
 author: namelessman
-language: zh-CN
+language:
+  - en
+  - zh-CN
 timezone:
 
 # URL
@@ -70,6 +72,9 @@ theme_config:
   google_analytics:
     tracking_id: G-3JW1S6RPYF
     only_pageview: false
+  menu:
+    Home: / || fa fa-home
+    Portfolio: /portfolio/ || fa fa-user
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
